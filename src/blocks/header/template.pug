@@ -1,6 +1,25 @@
+mixin basket(params={})
+  -
+    const { count } = params
+
+  .header__basket
+    img(src=`${icnUrl}/shopping-cart.svg` alt="").header__basket-icon
+    .header__basket-badge
+      <svg width="15" height="16" class='header__basket-star' viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 0.277588L9.3541 2.07125L11.9084 1.70996L12.3541 4.25088L14.6329 5.45996L13.5 7.77759L14.6329 10.0952L12.3541 11.3043L11.9084 13.8452L9.3541 13.4839L7.5 15.2776L5.6459 13.4839L3.09161 13.8452L2.6459 11.3043L0.367076 10.0952L1.5 7.77759L0.367076 5.45996L2.6459 4.25088L3.09161 1.70996L5.6459 2.07125L7.5 0.277588Z" fill="#828282"/>
+      </svg>
+      span.header__basket-count 1
+
+
+mixin menu(params={})
+  .header__menu
+    .header__menu-vector
+    .header__menu-vector
+    .header__menu-vector
+
 header.header
   .header__container
-    img(src=`${imgUrl}/logo.png` alt="").header__logo
+    img(src=`${imgUrl}/logo.svg` alt="").header__logo
     nav.header__navigation
       ul.header__navigation-list
         li.header__navigation-item
@@ -14,4 +33,5 @@ header.header
     .header__info
       .header__button
         +button({title:'Заказать звонок'})
-      .header__basket
+      +basket()
+      +menu()
