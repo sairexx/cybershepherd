@@ -2,56 +2,48 @@
 @use 'styles/variables' as vars;
 
 .button {
-  position: relative;
-
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  padding: 5px 30px;
+  padding: 17px 20px 15px 20px;
 
-  background: rgba(25, 197, 241, 0.36);
-  border: 1px solid rgba(25, 197, 241, 0.26);
-  border-radius: 6px;
+  background-color: transparent;
+  border: 2px solid #0020d0;
+  border-radius: 5px;
+
+  transition: border-color vars.$transition-duration ease-in-out;
 
   &:hover {
-    background: rgba(25, 197, 241, 0.6);
-  }
+    border-color: #1657ff;
 
-  &:focus {
-    background: rgba(16, 125, 153, 0.56);
+    transition: border-color vars.$transition-duration ease-in-out;
 
     .button__title {
-      color: #808080;
+      color: #1657ff;
+
+      transition: color vars.$transition-duration ease-in-out;
     }
   }
 
-  @include ut.tablet {
-    padding: 8px 32px;
+  &:active {
+    border-color: #5887ff;
+
+    .button__title {
+      color: #5887ff;
+    }
   }
 
   &__title {
-    font-family: 'Open Sans';
+    font-family: vars.$druk-cyr;
     font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 35px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
     text-transform: uppercase;
-    white-space: nowrap;
-    color: #ffffff;
 
-    @include ut.tablet {
-      font-size: 32px;
-      line-height: 44px;
-    }
-  }
-
-  &__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    color: #0020d0;
+    transition: color vars.$transition-duration ease-in-out;
   }
 }

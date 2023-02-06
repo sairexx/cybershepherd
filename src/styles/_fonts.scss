@@ -1,52 +1,60 @@
 // DRUK CYR
-
 @font-face {
-  font-family: 'Druk Cyr';
-  src: url('DrukCyr-Bold.eot');
-  src: local('Druk Cyr Bold'), local('DrukCyr-Bold'),
-    url('fonts/Druk/DrukCyr-Bold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Druk/DrukCyr-Bold.woff2') format('woff2'),
-    url('fonts/Druk/DrukCyr-Bold.woff') format('woff'),
-    url('fonts/Druk/DrukCyr-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Druk Cyr';
-  src: url('DrukCyr-Heavy.eot');
-  src: local('Druk Cyr Heavy'), local('DrukCyr-Heavy'),
-    url('fonts/Druk/DrukCyr-Heavy.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Druk/DrukCyr-Heavy.woff2') format('woff2'),
-    url('fonts/Druk/DrukCyr-Heavy.woff') format('woff'),
-    url('fonts/Druk/DrukCyr-Heavy.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Druk Cyr';
-  src: url('DrukCyr-Super.eot');
-  src: local('Druk Cyr Super'), local('DrukCyr-Super'),
-    url('fonts/Druk/DrukCyr-Super.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Druk/DrukCyr-Super.woff2') format('woff2'),
-    url('fonts/Druk/DrukCyr-Super.woff') format('woff'),
-    url('fonts/Druk/DrukCyr-Super.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Druk Cyr';
-  src: url('DrukCyr-Medium.eot');
-  src: local('Druk Cyr Medium'), local('DrukCyr-Medium'),
-    url('fonts/Druk/DrukCyr-Medium.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Druk/DrukCyr-Medium.woff2') format('woff2'),
-    url('fonts/Druk/DrukCyr-Medium.woff') format('woff'),
-    url('fonts/Druk/DrukCyr-Medium.ttf') format('truetype');
+  font-family: 'Druk Text Wide Cyr';
+  src: url('DrukTextWideCyr-Medium.eot');
+  src: local('Druk Text Wide Cyr Medium'), local('DrukTextWideCyr-Medium'),
+    url('fonts/Druk/DrukTextWideCyr-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/Druk/DrukTextWideCyr-Medium.woff2') format('woff2'),
+    url('fonts/Druk/DrukTextWideCyr-Medium.woff') format('woff'),
+    url('fonts/Druk/DrukTextWideCyr-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('DrukTextWideCyr-Heavy.eot');
+  src: local('Druk Text Wide Cyr Heavy'), local('DrukTextWideCyr-Heavy'),
+    url('fonts/Druk/DrukTextWideCyr-Heavy.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/Druk/DrukTextWideCyr-Heavy.woff2') format('woff2'),
+    url('fonts/Druk/DrukTextWideCyr-Heavy.woff') format('woff'),
+    url('fonts/Druk/DrukTextWideCyr-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('DrukTextWideCyr-Bold.eot');
+  src: local('Druk Text Wide Cyr Bold'), local('DrukTextWideCyr-Bold'),
+    url('fonts/Druk/DrukTextWideCyr-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/Druk/DrukTextWideCyr-Bold.woff2') format('woff2'),
+    url('fonts/Druk/DrukTextWideCyr-Bold.woff') format('woff'),
+    url('fonts/Druk/DrukTextWideCyr-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('DrukTextWideCyr-Super.eot');
+  src: local('Druk Text Wide Cyr Super'), local('DrukTextWideCyr-Super'),
+    url('fonts/Druk/DrukTextWideCyr-Super.eot?#iefix')
+      format('embedded-opentype'),
+    url('fonts/Druk/DrukTextWideCyr-Super.woff2') format('woff2'),
+    url('fonts/Druk/DrukTextWideCyr-Super.woff') format('woff'),
+    url('fonts/Druk/DrukTextWideCyr-Super.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 // MONTSERRAT
 
 @font-face {

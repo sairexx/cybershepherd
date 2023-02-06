@@ -1,1 +1,17 @@
 header.header
+  .header__container
+    img(src=`${imgUrl}/logo.png` alt="").header__logo
+    nav.header__navigation
+      ul.header__navigation-list
+        li.header__navigation-item
+          a(href="").header__navigation-link Каталог
+        li.header__navigation-item
+          a(href="").header__navigation-link как купить
+        li.header__navigation-item
+          a(href="").header__navigation-link о компании
+        li.header__navigation-item
+          a(href="").header__navigation-link Контакты
+    .header__info
+      .header__button
+        +button({title:'Заказать звонок'})
+      .header__basket

@@ -8,6 +8,8 @@ $desktop: 1440;
 $padding-base: 1.6rem;
 $content-width: 900px;
 
+$transition-duration: 0.3s;
+
 $font-weights: (
   '100': 100,
   '200': 200,
@@ -20,6 +22,6 @@ $font-weights: (
   '900': 900,
 );
 
-$druk-cyr: 'Druk Cyr';
+$druk-cyr: 'Druk Text Wide Cyr';
 $montserrat: 'Montserrat';
 $default-font: $druk-cyr;

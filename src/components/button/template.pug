@@ -1,6 +1,5 @@
 mixin button(params={})
-  - const { title, link } = params
+  - const { title } = params
 
   button.button
     span.button__title #{title}
-    a(href=`${link}`).button__link
