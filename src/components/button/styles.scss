@@ -1,0 +1,57 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 30px;
+
+  background: rgba(25, 197, 241, 0.36);
+  border: 1px solid rgba(25, 197, 241, 0.26);
+  border-radius: 6px;
+
+  &:hover {
+    background: rgba(25, 197, 241, 0.6);
+  }
+
+  &:focus {
+    background: rgba(16, 125, 153, 0.56);
+
+    .button__title {
+      color: #808080;
+    }
+  }
+
+  @include ut.tablet {
+    padding: 8px 32px;
+  }
+
+  &__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #ffffff;
+
+    @include ut.tablet {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('DrukCyr-Bold.eot');
+    src: local('Druk Cyr Bold'), local('DrukCyr-Bold'),
+        url('DrukCyr-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DrukCyr-Bold.woff2') format('woff2'),
+        url('DrukCyr-Bold.woff') format('woff'),
+        url('DrukCyr-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('DrukCyr-Heavy.eot');
+    src: local('Druk Cyr Heavy'), local('DrukCyr-Heavy'),
+        url('DrukCyr-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('DrukCyr-Heavy.woff2') format('woff2'),
+        url('DrukCyr-Heavy.woff') format('woff'),
+        url('DrukCyr-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('DrukCyr-Super.eot');
+    src: local('Druk Cyr Super'), local('DrukCyr-Super'),
+        url('DrukCyr-Super.eot?#iefix') format('embedded-opentype'),
+        url('DrukCyr-Super.woff2') format('woff2'),
+        url('DrukCyr-Super.woff') format('woff'),
+        url('DrukCyr-Super.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('DrukCyr-Medium.eot');
+    src: local('Druk Cyr Medium'), local('DrukCyr-Medium'),
+        url('DrukCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('DrukCyr-Medium.woff2') format('woff2'),
+        url('DrukCyr-Medium.woff') format('woff'),
+        url('DrukCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+

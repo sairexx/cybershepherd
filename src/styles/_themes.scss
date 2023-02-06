@@ -1,0 +1,25 @@
+$theme-dark: (
+  primary: #0065FF,
+  body-bg: #333,
+) !default;
+
+$theme-light: (
+  primary: #7990E1,
+  secondary: #595959,
+  body-bg: #F2F2F2,
+  light: #FFFFFF,
+  input-bg: #F7F7F7,
+  input-border: #EFEEEF,
+  input-bg-active: #FDFDFD,
+  input-border-active: #7990E1,
+  input-placeholder: #595959,
+  input-color: #000000,
+  text: #000000,
+  transparent: transparent,
+  button-disabled: rgba(121, 144, 225, 0.5),
+) !default;
+
+$themes: (
+  'dark': $theme-dark,
+  'light': $theme-light,
+);

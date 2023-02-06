@@ -1,0 +1,42 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: vars.$default-font;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @include ut.tablet {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}

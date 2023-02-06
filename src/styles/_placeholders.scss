@@ -1,0 +1,20 @@
+%bg-icon-center {
+  background: {
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+%bg-icon-contain {
+  @extend %bg-icon-center;
+  background: {
+    size: contain;
+  }
+}
+
+%bg-icon-cover {
+  @extend %bg-icon-center;
+  background: {
+    size: cover;
+  }
+}

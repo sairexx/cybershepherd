@@ -1,0 +1,47 @@
+{
+  "name": "pug-vitejs-multipage-layout",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build --emptyOutDir",
+    "preview": "vite preview --port=8080",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "yarn lint:format && yarn lint:fix && stylelint **/*.scss",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-pug": "^1.2.4",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.0",
+    "prettier": "2.6.0",
+    "rollup-plugin-polyfill-node": "^0.10.2",
+    "sass": "^1.49.9",
+    "stylelint": "^14.11.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "typescript": "^4.7.3",
+    "vite": "^2.8.0",
+    "vite-plugin-pug": "^0.3.1",
+    "vite-plugin-static-copy": "^0.5.0"
+  },
+  "dependencies": {},
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write .",
+      "eslint --ext .tsx --ext .ts src/ --fix"
+    ],
+    "*.scss": [
+      "npx stylelint **/*.scss --fix"
+    ],
+    "*.js": "eslint --cache --fix"
+  }
+}

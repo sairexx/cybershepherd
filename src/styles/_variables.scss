@@ -1,0 +1,25 @@
+$grid-columns: 12;
+$grid-gap: 0;
+$grid-align-list: start, center, end;
+
+$tablet: 768;
+$desktop: 1440;
+
+$padding-base: 1.6rem;
+$content-width: 900px;
+
+$font-weights: (
+  '100': 100,
+  '200': 200,
+  '300': 300,
+  '400': 400,
+  '500': 500,
+  '600': 600,
+  '700': 700,
+  '800': 800,
+  '900': 900,
+);
+
+$druk-cyr: 'Druk Cyr';
+$montserrat: 'Montserrat';
+$default-font: $druk-cyr;

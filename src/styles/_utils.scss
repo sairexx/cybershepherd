@@ -1,0 +1,63 @@
+@use 'sass:map';
+@use 'styles/themes' as *;
+@use 'styles/variables' as vars;
+
+// Media
+@mixin tablet {
+  @media only screen and (min-width: ((vars.$tablet + 1) * 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: ((vars.$desktop + 1) * 1px)) {
+    @content;
+  }
+}
+
+@mixin wide-screen {
+  @media only screen and (min-width: ((vars.$wide-screen + 1) * 1px)) {
+    @content;
+  }
+}
+
+// Theme
+@mixin theming($property, $key) {
+  @each $theme, $colors in $themes {
+    &.theme-#{$theme},
+    .theme-#{$theme} & {
+      #{$property}: map.get($colors, $key);
+    }
+  }
+}
+
+@mixin color($arguments...) {
+  @include theming('color', $arguments...);
+}
+
+@mixin border-color($arguments...) {
+  @include theming('border-color', $arguments...);
+}
+
+@mixin background-color($arguments...) {
+  @include theming('background-color', $arguments...);
+}
+
+@mixin opacity($arguments...) {
+  @include theming('opacity', $arguments...);
+}
+
+
+// Typography
+@mixin set-font($size, $weight: fasle, $color: false) {
+  font-size: $size;
+
+  @if $weight {
+    font-weight: map.get(vars.$font-weights, $weight);
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+

@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use 'styles/themes' as *;
+
+@function get-color($key) {
+  $color: false;
+  @each $theme, $colors in $themes {
+    $color: map.get($colors, $key);
+}
+  @return $color;
+}
