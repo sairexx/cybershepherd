@@ -10,6 +10,15 @@
   padding: 17px 52px 16px 39px;
 
   width: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+
+  @include ut.tablet {
+    padding: 14px 0 14px 0;
+  }
+
+  @include ut.desktop {
+    padding: 28px 0 29px 0;
+  }
 
   &__container {
     display: flex;
@@ -17,26 +26,66 @@
     justify-content: space-between;
 
     width: 100%;
+
+    @include ut.tablet {
+      width: 764px;
+    }
+
+    @include ut.desktop {
+      width: 1180px;
+      justify-content: flex-start;
+    }
   }
 
   &__logo {
     height: 27px;
     width: 110px;
+
+    @include ut.tablet {
+      width: 130px;
+      height: 32px;
+    }
+
+    @include ut.desktop {
+      height: 44px;
+      width: 180px;
+    }
   }
 
   &__navigation {
     display: none;
 
-    @include ut.tablet {
+    @include ut.desktop {
       display: flex;
+      margin-left: 44px;
     }
 
     &-list {
       display: flex;
     }
+
     &-item {
+      &:nth-child(2) {
+        margin-left: 36px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 42px;
+      }
+
+      &:nth-child(4) {
+        margin-left: 48px;
+      }
     }
+
     &-link {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+
+      color: #2c2c2c;
     }
   }
 
@@ -45,10 +94,26 @@
     align-items: center;
     gap: 38px;
     margin: -6px -1px -2px 0px;
+
+    @include ut.tablet {
+      margin: 0 11px 0 0;
+      gap: 36px;
+    }
+
+    @include ut.desktop {
+      gap: 29px;
+
+      margin-left: 39px;
+    }
   }
 
   &__button {
     display: none;
+
+    @include ut.desktop {
+      display: flex;
+      width: 247px;
+    }
   }
 
   &__menu {
@@ -59,6 +124,15 @@
     width: 23px;
 
     margin: 3px 1px 0px 0px;
+
+    @include ut.tablet {
+      width: 26px;
+      margin-bottom: 5px;
+    }
+
+    @include ut.desktop {
+      display: none;
+    }
 
     &-vector {
       width: 100%;
@@ -76,6 +150,11 @@
     &-icon {
       width: 25px;
       height: 21px;
+
+      @include ut.tablet {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     &-badge {

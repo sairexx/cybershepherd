@@ -1,0 +1,67 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.preview {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/images/main-preview.png');
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    // width: 350px;
+    margin-top: 435px;
+    padding-top: 231px;
+
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-blend-mode: multiply;
+    // background-image: url('../../../assets/images/main-preview-star.svg');
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 0 30px 33px 40px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+    z-index: 2;
+  }
+
+  &__star {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: multiply 0.3;
+  }
+
+  &__description {
+    font-family: vars.$montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+
+    color: #ffffff;
+    z-index: 2;
+  }
+}
