@@ -9,3 +9,5 @@ import './main/4catalog'
 import './main/5reasons'
 import './main/6partners'
 import './main/7reviews'
+
+import './catalog'

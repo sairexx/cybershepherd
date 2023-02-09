@@ -35,6 +35,12 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased !important;
   }
+
+  .root-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 a {

@@ -1,0 +1,23 @@
+mixin catalogItem(params={})
+  - const { title, modifier, imgSrc } = params
+
+  .catalog__item(class=`${modifier ? `catalog__item_${modifier}` : ''}`)
+    //- img(src=`${imgUrl}/${imgSrc}`, alt="").catalog__item-image
+    .catalog__item-overlay
+    .catalog__item-info
+      span.catalog__item-title #{title}
+      a.catalog__item-link Подробнее
+
+section.catalog
+  .catalog__container
+    h2.catalog__title каталог
+    .catalog__grid
+      +catalogItem({title: 'Электропастухи для молочного и мясного КРС', imgSrc: 'catalog-1.png', modifier: 'cow'})
+      +catalogItem({title: 'Электропастухи для овец и ягнят', imgSrc: 'catalog-2.png', modifier: 'shape'})
+      +catalogItem({title: 'Электропастухи для лошадей и жеребят', imgSrc: 'catalog-3.png', modifier: 'horse'})
+      +catalogItem({title: 'Электропастухи для коз', imgSrc: 'catalog-4.png', modifier: 'goat'})
+      +catalogItem({title: 'Электропастухи для свиней и поросят', imgSrc: 'catalog-5.png', modifier: 'pig'})
+      +catalogItem({title: 'Электропастухи для птицы и мелких животных', imgSrc: 'catalog-6.png', modifier: 'bird'})
+      +catalogItem({title: 'Электропастухи для защиты пасеки от медведя', imgSrc: 'catalog-7.png', modifier: 'bee'})
+      +catalogItem({title: 'Электропастухи универсальные', imgSrc: 'catalog-8.png', modifier: 'universal'})
+      +catalogItem({title: 'комплектующие для Электропастухов', imgSrc: 'catalog-9.png', modifier: 'accessories'})

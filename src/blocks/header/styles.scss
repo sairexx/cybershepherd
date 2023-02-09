@@ -62,19 +62,20 @@
 
     &-list {
       display: flex;
+      align-items: center;
     }
 
     &-item {
       &:nth-child(2) {
-        margin-left: 36px;
+        margin-left: 31px;
       }
 
       &:nth-child(3) {
-        margin-left: 42px;
+        margin-left: 37px;
       }
 
       &:nth-child(4) {
-        margin-left: 48px;
+        margin-left: 39px;
       }
     }
 
@@ -86,6 +87,7 @@
       text-transform: uppercase;
 
       color: #2c2c2c;
+      white-space: nowrap;
     }
   }
 
@@ -154,6 +156,11 @@
       @include ut.tablet {
         width: 32px;
         height: 32px;
+      }
+
+      @include ut.desktop {
+        width: 39px;
+        height: 35px;
       }
     }
 

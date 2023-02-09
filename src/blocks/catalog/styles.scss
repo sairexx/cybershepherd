@@ -1,0 +1,260 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  padding: 38px 39px 64px 39px;
+
+  @include ut.desktop {
+    padding: 91px 39px 64px 39px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+
+    @include ut.tablet {
+      max-width: 765px;
+      gap: 36px;
+    }
+
+    @include ut.desktop {
+      max-width: 1180px;
+      gap: 49px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    text-transform: uppercase;
+
+    color: #0020d0;
+
+    @include ut.tablet {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include ut.desktop {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include ut.tablet {
+      row-gap: 21px;
+    }
+
+    @include ut.desktop {
+      column-gap: 20px;
+      row-gap: 17px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 222px;
+    max-width: 350px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include ut.tablet {
+      max-width: 375px;
+    }
+
+    @include ut.desktop {
+      height: 359px;
+      max-width: 380px;
+    }
+
+    &_cow {
+      background-image: url('../../assets/images/cow-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/cow-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        background-image: url('../../assets/images/cow-desktop-background.png');
+      }
+    }
+
+    &_shape {
+      background-image: url('../../assets/images/shape-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/shape-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        background-image: url('../../assets/images/shape-desktop-background.png');
+      }
+    }
+
+    &_horse {
+      .catalog__item-title {
+        font-size: 22px;
+        line-height: 27px;
+      }
+
+      background-image: url('../../assets/images/horse-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/horse-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        background-image: url('../../assets/images/horse-desktop-background.png');
+      }
+    }
+
+    &_goat {
+      height: 391px;
+
+      .catalog__item-overlay {
+        height: 211px;
+      }
+      .catalog__item-title {
+        font-size: 22px;
+        line-height: 27px;
+      }
+      .catalog__item-info {
+        height: 200px;
+        padding: 17px 29px;
+      }
+
+      background-image: url('../../assets/images/goat-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/goat-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        background-image: url('../../assets/images/goat-desktop-background.png');
+      }
+    }
+    &_pig {
+    }
+    &_bird {
+    }
+    &_bee {
+    }
+    &_universal {
+    }
+    &_accessories {
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &-overlay {
+      position: relative;
+
+      width: 100%;
+      height: 125px;
+
+      margin-top: 97px;
+
+      background: #0020d0;
+      mix-blend-mode: multiply;
+      z-index: 2;
+
+      @include ut.desktop {
+        height: 176px;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 126px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      padding: 15px 14px;
+      z-index: 2;
+
+      @include ut.tablet {
+        gap: 16px;
+        padding: 15px 17px;
+      }
+
+      @include ut.desktop {
+        height: 164px;
+        padding: 15px 25px;
+
+        gap: 46px;
+      }
+    }
+
+    &-title {
+      height: 62px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      @include ut.desktop {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-link {
+      font-family: vars.$montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration-line: underline;
+
+      color: #d9d9d9;
+
+      @include ut.tablet {
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      @include ut.desktop {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}

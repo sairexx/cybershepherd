@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Druk Text Wide Cyr';
+    src: url('DrukTextWideCyr-Medium.eot');
+    src: url('DrukTextWideCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('DrukTextWideCyr-Medium.woff2') format('woff2'),
+        url('DrukTextWideCyr-Medium.woff') format('woff'),
+        url('DrukTextWideCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk Wide Cyr';
+    src: url('DrukWideCyr-Medium.eot');
+    src: url('DrukWideCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('DrukWideCyr-Medium.woff2') format('woff2'),
+        url('DrukWideCyr-Medium.woff') format('woff'),
+        url('DrukWideCyr-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
