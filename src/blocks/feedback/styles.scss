@@ -1,0 +1,168 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.feedback {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 42px 38px 45px 40px;
+
+  width: 100%;
+  background: #0020d0;
+
+  @include ut.tablet {
+    padding: 42px 38px 45px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 23px;
+
+    width: 100%;
+    max-width: 1440px;
+
+    @include ut.tablet {
+      flex-direction: row;
+    }
+  }
+  &__logo {
+    width: 200px;
+    height: 200px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/images/feedback-mobile-logo.png');
+
+    @include ut.tablet {
+      height: 534px;
+      width: 375px;
+
+      background-image: url('../../assets/images/feedback-tablet-background.png');
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    @include ut.tablet {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    @include ut.desktop {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  &__subtitle {
+    font-family: vars.$montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #ffffff;
+
+    @include ut.tablet {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    @include ut.desktop {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__input {
+    padding: 13px 0 9px 16px;
+    background: rgba(238, 238, 238, 0.5);
+    border-radius: 5px;
+    border: none;
+
+    font-family: vars.$montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #f5f5f5;
+
+    &::placeholder {
+      font-family: vars.$montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #f5f5f5;
+    }
+
+    @include ut.tablet {
+      padding: 18.88px 0 19px 15px;
+
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    @include ut.desktop {
+      padding: 25px 0 24px 20px;
+
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+    background-color: transparent;
+
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+
+    padding: 10px 0 7px 0;
+
+    &-text {
+      font-family: 'Druk Wide Cyr';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+  }
+}

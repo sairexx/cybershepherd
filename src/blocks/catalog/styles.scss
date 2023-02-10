@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
 
-  padding: 38px 39px 64px 39px;
+  padding: 38px 39px 65px 39px;
 
   @include ut.desktop {
     padding: 91px 39px 64px 39px;
@@ -18,6 +18,7 @@
     gap: 20px;
 
     width: 100%;
+    max-width: 765px;
 
     @include ut.tablet {
       max-width: 765px;
@@ -113,11 +114,7 @@
     }
 
     &_horse {
-      .catalog__item-title {
-        font-size: 22px;
-        line-height: 27px;
-      }
-
+      margin-top: 2px;
       background-image: url('../../assets/images/horse-mobile-background.png');
 
       @include ut.tablet {
@@ -126,24 +123,15 @@
 
       @include ut.desktop {
         background-image: url('../../assets/images/horse-desktop-background.png');
+
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
       }
     }
 
     &_goat {
-      height: 391px;
-
-      .catalog__item-overlay {
-        height: 211px;
-      }
-      .catalog__item-title {
-        font-size: 22px;
-        line-height: 27px;
-      }
-      .catalog__item-info {
-        height: 200px;
-        padding: 17px 29px;
-      }
-
       background-image: url('../../assets/images/goat-mobile-background.png');
 
       @include ut.tablet {
@@ -151,18 +139,167 @@
       }
 
       @include ut.desktop {
+        height: 391px;
+
+        .catalog__item-overlay {
+          height: 211px;
+        }
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          gap: 79px;
+          padding: 17px 29px;
+        }
+
+        .catalog__item-link {
+          margin-left: -4px;
+        }
+
         background-image: url('../../assets/images/goat-desktop-background.png');
       }
     }
+
     &_pig {
+      margin-top: 2px;
+      background-image: url('../../assets/images/pig-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/pig-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        height: 391px;
+
+        .catalog__item-overlay {
+          height: 211px;
+        }
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          padding: 17px 25px;
+          gap: 80px;
+        }
+
+        background-image: url('../../assets/images/pig-desktop-background.png');
+      }
     }
-    &_bird {
+
+    &_rabbit {
+      background-image: url('../../assets/images/rabbit-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/rabbit-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        height: 391px;
+
+        .catalog__item-overlay {
+          height: 211px;
+        }
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          padding: 17px 25px;
+          gap: 80px;
+        }
+
+        background-image: url('../../assets/images/rabbit-desktop-background.png');
+      }
     }
+
     &_bee {
+      margin-top: 2px;
+      background-image: url('../../assets/images/bee-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/bee-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        height: 393px;
+        margin-top: 2px;
+
+        .catalog__item-overlay {
+          height: 213px;
+        }
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          padding: 15px 25px;
+          gap: 80px;
+        }
+
+        background-image: url('../../assets/images/bee-desktop-background.png');
+      }
     }
+
     &_universal {
+      background-image: url('../../assets/images/universal-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/universal-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        height: 393px;
+        margin-top: 2px;
+
+        background-image: url('../../assets/images/universal-desktop-background.png');
+
+        .catalog__item-overlay {
+          height: 213px;
+        }
+        .catalog__item-title {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          padding: 15px 25px;
+          gap: 80px;
+        }
+      }
     }
+
     &_accessories {
+      background-image: url('../../assets/images/accessories-mobile-background.png');
+
+      @include ut.tablet {
+        background-image: url('../../assets/images/accessories-tablet-background.png');
+      }
+
+      @include ut.desktop {
+        height: 393px;
+        margin-top: 2px;
+
+        .catalog__item-overlay {
+          height: 213px;
+        }
+        .catalog__item-title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        .catalog__item-info {
+          height: 200px;
+          padding: 15px 25px;
+          gap: 80px;
+        }
+
+        background-image: url('../../assets/images/accessories-desktop-background.png');
+      }
     }
 
     &-image {
