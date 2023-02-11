@@ -12,3 +12,4 @@ import './main/7reviews'
 
 import './catalog'
 import './feedback'
+import './contacts'

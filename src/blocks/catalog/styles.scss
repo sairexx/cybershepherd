@@ -8,8 +8,12 @@
 
   padding: 38px 39px 65px 39px;
 
+  @include ut.tablet {
+    padding-bottom: 50px;
+  }
+
   @include ut.desktop {
-    padding: 91px 39px 64px 39px;
+    padding: 91px 39px 88px 39px;
   }
 
   &__container {
@@ -114,7 +118,7 @@
     }
 
     &_horse {
-      margin-top: 2px;
+      // margin-top: 2px;
       background-image: url('../../assets/images/horse-mobile-background.png');
 
       @include ut.tablet {
@@ -167,11 +171,13 @@
       background-image: url('../../assets/images/pig-mobile-background.png');
 
       @include ut.tablet {
+        margin-top: -1px;
         background-image: url('../../assets/images/pig-tablet-background.png');
       }
 
       @include ut.desktop {
         height: 391px;
+        margin: 0;
 
         .catalog__item-overlay {
           height: 211px;
@@ -194,10 +200,12 @@
       background-image: url('../../assets/images/rabbit-mobile-background.png');
 
       @include ut.tablet {
+        margin-top: -1px;
         background-image: url('../../assets/images/rabbit-tablet-background.png');
       }
 
       @include ut.desktop {
+        margin: 0;
         height: 391px;
 
         .catalog__item-overlay {
@@ -222,10 +230,12 @@
       background-image: url('../../assets/images/bee-mobile-background.png');
 
       @include ut.tablet {
+        margin-top: -1px;
         background-image: url('../../assets/images/bee-tablet-background.png');
       }
 
       @include ut.desktop {
+        margin: 0;
         height: 393px;
         margin-top: 2px;
 

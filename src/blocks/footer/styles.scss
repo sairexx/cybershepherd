@@ -4,7 +4,6 @@
 .footer {
   display: flex;
   justify-content: center;
-  // margin-top: auto;
   width: 100%;
 
   flex: 0 1 auto;
@@ -15,11 +14,11 @@
     flex-direction: column;
     width: 100%;
 
-    padding: 29px 0px 20px 39px;
-    gap: 19px;
+    padding: 29px 0px 22px 39px;
+    gap: 15px;
 
     @include ut.tablet {
-      padding: 0;
+      padding: 27px 0 23px 0;
       width: 764px;
 
       flex-direction: row;
@@ -28,21 +27,40 @@
 
     @include ut.desktop {
       width: 1180px;
+      padding: 42px 0 45px 0;
     }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+
+    @include ut.tablet {
+      gap: 16px;
+    }
+
+    @include ut.desktop {
+      gap: 22px;
+    }
   }
 
   &__logo {
     width: 110px;
     height: 26px;
+
+    @include ut.tablet {
+      height: 33px;
+      width: 137px;
+    }
+
+    @include ut.desktop {
+      height: 44px;
+      width: 180px;
+    }
   }
 
   &__license {
-    font-family: 'Montserrat';
+    font-family: vars.$montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -55,6 +73,15 @@
 
       @include ut.tablet {
         display: flex;
+        width: 250px;
+      }
+
+      @include ut.desktop {
+        font-size: 16px;
+        line-height: 20px;
+
+        color: #bbbbbb;
+        width: 300px;
       }
     }
 
@@ -70,11 +97,28 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
+
+    @include ut.tablet {
+      margin-right: 26px;
+      gap: 38px;
+    }
+
+    @include ut.desktop {
+      margin-right: 13px;
+      margin-top: 4px;
+      gap: 48px;
+    }
   }
 
   &__links {
     display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include ut.desktop {
+      gap: 24px;
+    }
   }
 
   &__number {
@@ -87,11 +131,78 @@
     text-transform: uppercase;
 
     color: #bbbbbb;
+
+    @include ut.desktop {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
-  &__buttons {
+  &__controls {
     display: flex;
     gap: 7px;
+
+    @include ut.desktop {
+      gap: 11px;
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+
+    background: #0020d0;
+
+    @include ut.desktop {
+      width: 37px;
+      height: 37px;
+    }
+
+    &:active {
+      .footer__button-text {
+        color: #ffffff;
+      }
+    }
+    &:hover {
+      .footer__button-text {
+        color: #ffffff;
+      }
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &-text {
+      font-family: vars.$montserrat;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+
+      color: #bbbbbb;
+
+      @include ut.desktop {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
   }
 
   &__design {
@@ -99,19 +210,34 @@
     align-items: center;
     gap: 11px;
 
+    @include ut.desktop {
+      gap: 5px;
+    }
+
     &-text {
-      font-family: 'Montserrat';
+      font-family: vars.$montserrat;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
 
       color: #bbbbbb;
+
+      @include ut.desktop {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
 
     &-image {
       width: 85px;
       height: 11px;
+
+      @include ut.desktop {
+        height: 12px;
+        width: 99px;
+        margin: 4px 0 0 0;
+      }
     }
   }
 }

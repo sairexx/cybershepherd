@@ -1,0 +1,35 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.not-found {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  &__image {
+    &-source {
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__link {
+  }
+}
