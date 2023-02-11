@@ -1,0 +1,36 @@
+mixin reviewsItem(params={})
+  - const { title, modifier } = params
+
+  .reviews__item(class=`${modifier ? `reviews__item_${modifier}` : '' }`)
+    span.reviews__item-title #{title}
+    button.reviews__item-button
+      img(src=`${icnUrl}/youtube.svg `, alt="").reviews__item-button-image
+
+section.reviews
+  .reviews__container
+    h2.reviews__title отзывы
+    .reviews__grid
+      +reviewsItem({ 
+        title: 'Одуревшие быки под контролем, хозяин в восторге',
+        modifier: 'cow' 
+      })
+      +reviewsItem({ 
+        title: 'сосед помогает ставить электропастух, искру проверяю на нем',
+        modifier: 'neighbor'
+      })
+      +reviewsItem({ 
+        title: 'Россия 24 — Интервью с российским производителем электропастухов',
+        modifier: 'interview'
+      })
+      .reviews__item(class=`reviews__item_battle`)
+        span.reviews__item-title Наши против #[br] французов — #[br] Бородинская битва электропастухов
+        button.reviews__item-button
+          img(src=`${icnUrl}/youtube.svg `, alt="").reviews__item-button-image
+      +reviewsItem({ 
+        title: 'Животные рады, когда меня бьет током',
+        modifier: 'animals'
+      })
+      +reviewsItem({
+        title: 'электропастух от гималайского медведя. пасека хабаровска',
+        modifier: 'cybershepherd'
+      })
