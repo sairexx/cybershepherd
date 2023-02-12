@@ -1,0 +1,143 @@
+mixin shopItem(params={})
+  -
+    const { title, subtitle, modifier, price, imgSrcMobile, imgSrcTablet, imgSrcDesktop } = params
+    const modifierClassName = modifier ? modifier : ''
+
+  .shop__item(class=`${ modifierClassName && `shop__item_${modifierClassName}`}`)
+    .shop__item-image
+      img(src=`${imgUrl}/shop/${imgSrcMobile}` alt="").shop__item-image-source.shop__item-image-source_mobile
+      img(src=`${imgUrl}/shop/${imgSrcTablet}` alt="").shop__item-image-source.shop__item-image-source_tablet
+      img(src=`${imgUrl}/shop/${imgSrcDesktop}` alt="").shop__item-image-source.shop__item-image-source_desktop
+    .shop__item-info
+      .shop__item-info-wrapper
+        span.shop__item-title #{title}
+        span.shop__item-subtitle #{subtitle}
+        span.shop__item-price #{price}
+      button.shop__item-button
+        span.shop__item-button-text в корзину
+
+mixin checkbox(params={})
+  - const { title, name, id } = params
+
+  .checkbox
+    label(for=`checkbox-${name}`).checkbox__label
+    input(name=`checkbox-${name}` id=`checkbox-${id}` type='checkbox').checkbox__input
+    .checkbox__box
+      .checkbox__inner
+    span.checkbox__text #{title}  
+
+section.shop
+  .shop__breadcrumbs
+    span.shop__breadcrumbs-text Каталог
+    img(src=`${icnUrl}/chevron-right.svg` alt="").shop__breadcrumbs-icon
+    span.shop__breadcrumbs-text Генератор импульсов Статик-3М
+  .shop__container
+    h2.shop__title комплектующие
+    .shop__grid
+      .shop__filter
+        span.shop__filter-title фильтр
+        .shop__filter-list
+          .shop__filter-row
+            +checkbox({name:'first', id:'first', title: 'Собственное производство'})
+          .shop__filter-row
+            +checkbox({name:'second', id:'second', title: 'Аксессуары'})
+          .shop__filter-row
+            +checkbox({name:'third', id:'third', title: 'Изгородь'})
+          .shop__filter-row
+            +checkbox({name:'four', id:'four', title: 'Изоляторы'})
+      .shop__list
+        +shopItem({
+          title:'изолятор для ленты',
+          subtitle:'для ленты любой ширины',
+          price:'25 р',
+          imgSrcMobile:'shop-iso-mobile.png',
+
+          imgSrcTablet:'shop-iso-tablet.png',
+          imgSrcDesktop:'shop-iso-desktop.png',
+        })
+        +shopItem(
+          {
+            title:'блок питания',
+            subtitle:'для электропастуха',
+            price:'250 р',
+
+            imgSrcMobile:'shop-block-mobile.png',
+            imgSrcTablet:'shop-block-tablet.png',
+            imgSrcDesktop:'shop-block-desktop.png',          }
+        )
+        +shopItem(
+          {
+            title:'аккумуляторная батарея для электропастуха',
+            subtitle:'напряжение 12 В, ёмкость 7 А·ч',
+            price:'1300 р',
+
+            imgSrcMobile:'shop-acc-mobile.png',
+            imgSrcTablet:'shop-acc-tablet.png',
+            imgSrcDesktop:'shop-acc-desktop.png',
+          }
+        )
+        +shopItem({
+          title:'изолятор для ленты',
+          subtitle:'для ленты любой ширины',
+          price:'25 р',
+
+          imgSrcMobile:'shop-iso-mobile.png',
+          imgSrcTablet:'shop-iso-tablet.png',
+          imgSrcDesktop:'shop-iso-desktop.png',
+          })
+        +shopItem(
+          {
+            title:'блок питания',
+            subtitle:'для электропастуха',
+            price:'250 р',
+
+            imgSrcMobile:'shop-block-mobile.png',
+            imgSrcTablet:'shop-block-tablet.png',
+            imgSrcDesktop:'shop-block-desktop.png',   
+          }
+        )
+        +shopItem(
+          {
+            title:'аккумуляторная батарея для электропастуха',
+            subtitle:'напряжение 12 В, ёмкость 7 А·ч',
+            price:'Нет в продаже',
+            modifier: 'disable',
+
+            imgSrcMobile:'shop-acc-mobile.png',
+            imgSrcTablet:'shop-acc-tablet.png',
+            imgSrcDesktop:'shop-acc-desktop.png',
+          }
+        )
+        +shopItem(
+          {
+            title:'электропастух для крс на 0,5 га',
+            subtitle:'300 метров в 2 ряда. Полный комплект',
+            price:'15 190 р',
+
+            imgSrcMobile:'shop-shepherd-mobile.png',
+            imgSrcTablet:'shop-shepherd-tablet.png',
+            imgSrcDesktop:'shop-shepherd-desktop.png',
+          }
+        )
+        +shopItem(
+          {
+            title:'электропастух для крс на 1 га',
+            subtitle:'400 метров в 2 ряда. Полный комплект',
+            price:'16 230 р',
+
+            imgSrcMobile:'shop-shepherd-mobile.png',
+            imgSrcTablet:'shop-shepherd-tablet.png',
+            imgSrcDesktop:'shop-shepherd-desktop.png',
+          }
+        )
+        +shopItem(
+          {
+            title:'электропастух для крс на 150 га',
+            subtitle:'5 километров в 2 ряда. Полный комплект',
+            price:'89 420 р',
+
+            imgSrcMobile:'shop-shepherd-mobile.png',
+            imgSrcTablet:'shop-shepherd-tablet.png',
+            imgSrcDesktop:'shop-shepherd-desktop.png',
+          }
+        )
