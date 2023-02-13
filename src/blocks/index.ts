@@ -10,6 +10,12 @@ import './main/5reasons'
 import './main/6partners'
 import './main/7reviews'
 
+import './about/a1'
+import './about/a2'
+import './about/a3'
+import './about/a4'
+import './about/a5'
+
 import './catalog'
 import './feedback'
 import './contacts'

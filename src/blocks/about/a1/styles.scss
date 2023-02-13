@@ -1,0 +1,189 @@
+@use 'styles/utils' as ut;
+@use 'styles/variables' as vars;
+
+.conditions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 864px;
+
+  padding: 0 27px 27px 27px;
+
+  background-image: url('../../../assets/images/about/about-preview.png');
+
+  @include ut.tablet {
+    padding: 55px 0 0 0;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 622px;
+  }
+
+  @include ut.desktop {
+    height: 932px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    width: 100%;
+    max-width: 764px;
+
+    @include ut.tablet {
+      gap: 37px;
+    }
+
+    @include ut.desktop {
+      gap: 55px;
+      max-width: 1179px;
+    }
+  }
+
+  &__title {
+    margin-left: 12px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    @include ut.tablet {
+      margin-left: 0;
+
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include ut.desktop {
+      font-size: 40px;
+      line-height: 58px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    gap: 17px;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 375px;
+    min-height: 370px;
+
+    padding: 23px 12px 17px 13px;
+
+    border-radius: 30px;
+    background: #ffffff;
+
+    @include ut.tablet {
+      gap: 20px;
+      padding: 33px 12px 45px 16px;
+    }
+
+    @include ut.desktop {
+      gap: 23px;
+      max-width: 380px;
+      max-height: 568px;
+      padding: 44px 19px 55px 22px;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      @include ut.tablet {
+        gap: 22px;
+      }
+
+      @include ut.desktop {
+        gap: 24px;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @include ut.tablet {
+      gap: 7px;
+    }
+
+    &:nth-child(2) {
+      .conditions__info-subtitle {
+        line-height: 17px;
+      }
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      color: #0020d0;
+
+      @include ut.tablet {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      @include ut.desktop {
+        font-size: 22px;
+        line-height: 27px;
+      }
+    }
+
+    &-subtitle {
+      font-family: vars.$montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+
+      color: #0020d0;
+
+      @include ut.tablet {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      @include ut.desktop {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__description {
+    font-family: vars.$montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #2c2c2c;
+
+    @include ut.desktop {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
