@@ -1,4 +1,5 @@
 section.guide
+  img(src=`${imgUrl}/about/guide-background.png`, alt="").guide__background
   .guide__container
     h2.guide__title как купить?
     .guide__content
@@ -12,11 +13,11 @@ section.guide
             span.guide__content-text Оплата в почтовом отделении или транспортной компании при получении товара;
             span.guide__content-text Оплата на карту Сбербанк через систему «Сбербанк Онлайн» или банкомат.
         .guide__case
-          img(src=`${icnUrl}/about-star.svg` alt="").guide__case-icon
-          .guide__case-description
+          .guide__case-header
+            img(src=`${icnUrl}/about-star.svg` alt="").guide__case-icon
             span.guide__content-title организации (ооо, ип, кфх)
-            .guide__case-info
-              span.guide__content-text Безналичная оплата на расчетный счет нашей компании.
+          .guide__case-info
+            span.guide__content-text Безналичная оплата на расчетный счет нашей компании.
       .guide__content-footer
         span.guide__content-title также возможна оплата наложенным платежом
         .guide__content-list
