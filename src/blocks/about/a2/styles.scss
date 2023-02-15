@@ -15,7 +15,7 @@
   }
 
   @include ut.desktop {
-    padding: 74px 29px 99px 24px;
+    padding: 74px 29px 54px 24px;
   }
 
   &__background {
@@ -83,7 +83,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
 
     @include ut.tablet {
       gap: 20px;
@@ -202,9 +202,22 @@
     @include ut.tablet {
       margin: -16px 0 0 0;
     }
+    @include ut.desktop {
+      margin: -2px 0 0px -20px;
+    }
 
     &-icon {
       max-width: 100px;
+
+      @include ut.desktop {
+        max-width: unset;
+      }
+
+      &_master {
+        @include ut.desktop {
+          width: 168px;
+        }
+      }
 
       &_visa {
         margin: 0 0 0 5px;
@@ -213,6 +226,11 @@
           width: 55.41px;
 
           margin: 0 0 0 13px;
+        }
+        @include ut.desktop {
+          width: 84px;
+
+          margin: 0 0 0 5px;
         }
       }
 
@@ -224,6 +242,11 @@
 
           margin: 0 0 0 24px;
         }
+        @include ut.desktop {
+          width: 111px;
+
+          margin: 0 0 0 36px;
+        }
       }
 
       &_sber {
@@ -233,6 +256,12 @@
           width: 84px;
 
           margin: 0 0 0 18px;
+        }
+
+        @include ut.desktop {
+          width: 123px;
+
+          margin: 0 0 0 28px;
         }
       }
     }
