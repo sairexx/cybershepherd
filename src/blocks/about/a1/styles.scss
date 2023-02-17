@@ -11,8 +11,6 @@
 
   padding: 0 27px 27px 27px;
 
-  background-image: url('../../../assets/images/about/about-preview.png');
-
   @include ut.tablet {
     padding: 55px 0 0 0;
     align-items: flex-start;
@@ -32,6 +30,8 @@
 
     width: 100%;
     max-width: 764px;
+
+    background-image: url('../../../assets/images/about/about-preview.png');
 
     @include ut.tablet {
       gap: 37px;
