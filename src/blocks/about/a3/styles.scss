@@ -1,344 +1,89 @@
 @use 'styles/utils' as ut;
 @use 'styles/variables' as vars;
 
-.shipping {
+.exhibitions {
   display: flex;
   justify-content: center;
 
   width: 100%;
 
-  padding: 0 39px 57px 39px;
-  margin-top: -151px;
-
-  @include ut.tablet {
-    margin-top: 0;
-
-    padding: 0 39px 69px 39px;
-  }
-
-  @include ut.desktop {
-    padding: 0 39px 188px 39px;
-  }
-
   &__container {
     display: flex;
     flex-direction: column;
+    gap: 32px;
+    padding: 32px 39px 51px 39px;
 
+    width: 100%;
     max-width: 765px;
-    gap: 39px;
 
     @include ut.tablet {
-      gap: 15px;
+      gap: 29px;
+      padding: 39px 0 75px 0;
     }
 
     @include ut.desktop {
-      padding-top: 97px; //delete
-
-      width: 100%;
+      padding: 65px 0 89px 0;
       max-width: 1180px;
 
-      gap: 22px;
-    }
-  }
-
-  &__head {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    @include ut.tablet {
-      align-items: unset;
-      flex-direction: row;
-
-      gap: 23px;
-    }
-
-    @include ut.desktop {
-      gap: 10px;
-    }
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    @include ut.tablet {
-      padding: 60px 0 0 0;
-      order: 1;
-
-      gap: 21px;
-      max-width: 380px;
-    }
-
-    @include ut.desktop {
-      gap: 30px;
-      max-width: 539px;
+      gap: 42px;
     }
   }
 
   &__title {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-
+    font-size: 20px;
+    line-height: 24px;
     text-transform: uppercase;
 
     color: #0020d0;
 
     @include ut.tablet {
+      max-width: 505px;
       font-size: 24px;
       line-height: 29px;
     }
 
     @include ut.desktop {
+      max-width: 676px;
       font-size: 40px;
       line-height: 49px;
     }
   }
 
-  &__description {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-  &__text {
-    font-family: vars.$montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-
-    color: #2c2c2c;
-
-    @include ut.desktop {
-      line-height: 24px;
-      font-size: 18px;
-    }
-  }
-
-  &__image {
-    width: 351px;
-    margin-left: -25px;
-
-    @include ut.tablet {
-      align-self: center;
-
-      order: 2;
-      width: 350px;
-      margin: 17px 0px 0 0px;
-    }
-
-    @include ut.desktop {
-      width: 640px;
-      margin: -51px 0px 0 0px;
-    }
-  }
-
   &__list {
     display: flex;
-    flex-direction: column;
-    gap: 31px;
-
-    padding-left: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
 
     @include ut.tablet {
-      flex-direction: row;
       gap: 15px;
-
-      padding-left: 0;
     }
 
     @include ut.desktop {
-      gap: 14px;
+      gap: 20px;
     }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    width: 170px;
+    height: 98px;
+
+    cursor: pointer;
 
     @include ut.tablet {
-      gap: 19px;
+      width: 245px;
+      height: 135px;
     }
 
-    &_delivery {
-      @include ut.tablet {
-        .shipping__item-icon {
-          width: 50px;
-        }
-
-        .shipping__item-title {
-          width: 245px;
-        }
-        .shipping__item-text {
-          width: 245px;
-        }
-      }
-
-      @include ut.desktop {
-        gap: 34px;
-
-        .shipping__item-icon {
-          width: 57px;
-        }
-
-        .shipping__item-text {
-          width: 386px;
-        }
-      }
+    @include ut.desktop {
+      width: 380px;
+      height: 209px;
     }
+  }
 
-    &_post {
-      gap: 9px;
-
-      @include ut.tablet {
-        gap: 40px;
-
-        .shipping__item-icon {
-          width: 37px;
-        }
-
-        .shipping__item-title {
-          width: 245px;
-        }
-        .shipping__item-text {
-          width: 245px;
-        }
-      }
-
-      @include ut.desktop {
-        gap: 60px;
-
-        .shipping__item-title {
-          width: 312px;
-        }
-
-        .shipping__item-head {
-          gap: 22px;
-        }
-
-        .shipping__item-icon {
-          width: 42.5px;
-          margin: -2px 0 0 0;
-        }
-
-        .shipping__item-text {
-          width: 375px;
-        }
-      }
-    }
-
-    &_bus {
-      margin-top: -2px;
-
-      .shipping__item-icon {
-        width: 50px;
-
-        margin-left: -9px;
-      }
-
-      .shipping__item-head {
-        gap: 12px;
-      }
-
-      @include ut.tablet {
-        .shipping__item-icon {
-          width: 92.8px;
-
-          margin: 2px 0 0 0;
-        }
-
-        .shipping__item-head {
-          gap: 19px;
-        }
-
-        .shipping__item-title {
-          width: 245px;
-        }
-        .shipping__item-text {
-          width: 245px;
-        }
-      }
-
-      @include ut.desktop {
-        gap: 33px;
-        margin: -1px 0px 0 14px;
-
-        .shipping__item-icon {
-          width: 100.8px;
-        }
-
-        .shipping__item-head {
-          gap: 21px;
-        }
-
-        .shipping__item-text {
-          width: 380px;
-        }
-      }
-    }
-
-    &-head {
-      display: flex;
-      align-items: center;
-      gap: 17px;
-
-      @include ut.tablet {
-        gap: 19px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    &-icon {
-      width: 35px;
-    }
-
-    &-title {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 19px;
-
-      text-transform: uppercase;
-
-      color: #0020d0;
-
-      @include ut.tablet {
-        font-size: 16px;
-        line-height: 21px;
-      }
-
-      @include ut.desktop {
-        font-size: 22px;
-        line-height: 27px;
-      }
-    }
-
-    &-text {
-      padding-left: 52px;
-
-      font-family: vars.$montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-
-      color: #2c2c2c;
-
-      @include ut.tablet {
-        padding-left: 0;
-      }
-
-      @include ut.desktop {
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -13,8 +13,16 @@ import './main/7reviews'
 import './about/a1'
 import './about/a2'
 import './about/a3'
-import './about/a4'
 import './about/a5'
+import './about/a6'
+
+import './advantages'
+
+import './shipping/a1'
+import './shipping/a2'
+import './shipping/a3'
+import './shipping/a4'
+import './shipping/a5'
 
 import './catalog'
 import './feedback'
