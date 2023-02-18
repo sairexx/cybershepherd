@@ -27,11 +27,14 @@
     padding: 70px 39px 79px 39px;
 
     @include ut.tablet {
-      padding: 37px 0 0 0;
+      padding: 37px 0 36px 0;
     }
 
     @include ut.desktop {
-      max-width: 1440px;
+      gap: 79px;
+      padding: 79px 0 85px 0;
+
+      max-width: 1174px;
     }
   }
 
@@ -69,6 +72,11 @@
       row-gap: 58px;
       column-gap: 16px;
     }
+
+    @include ut.desktop {
+      row-gap: 87px;
+      column-gap: 58px;
+    }
   }
 
   &__item {
@@ -82,15 +90,71 @@
       max-width: 245px;
     }
 
-    &_second {
-      height: 231px;
+    @include ut.desktop {
+      max-width: 342px;
+      gap: 21.5px;
+    }
 
-      .advantages__item-header {
-        gap: 14px;
+    &_flag {
+      @include ut.tablet {
+        gap: 53px;
+
+        .advantages__item-header {
+          gap: 17px;
+        }
+
+        .advantages__item-title {
+          max-width: 190px;
+        }
       }
 
+      @include ut.desktop {
+        max-width: 382px;
+
+        gap: 52px;
+
+        .advantages__item-header {
+          gap: 31px;
+        }
+      }
+    }
+
+    &_wallet {
       @include ut.tablet {
-        gap: 10px;
+        .advantages__item-header {
+          gap: 14px;
+        }
+
+        gap: 32px;
+      }
+
+      @include ut.desktop {
+        margin-left: -39px;
+        gap: 23px;
+
+        .advantages__item-header {
+          gap: 28px;
+        }
+      }
+    }
+
+    &_delivery {
+      @include ut.tablet {
+        .advantages__item-header {
+          gap: 14px;
+        }
+
+        gap: 11px;
+      }
+
+      @include ut.desktop {
+        .advantages__item-header {
+          gap: 30px;
+        }
+
+        max-width: 348px;
+        margin-left: -2px;
+        gap: 51px;
       }
     }
 
@@ -103,6 +167,10 @@
         gap: 7px;
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      @include ut.desktop {
+        gap: 18px;
       }
     }
 
