@@ -1,2 +1,222 @@
 @use 'styles/utils' as ut;
 @use 'styles/variables' as vars;
+
+.generator {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  background: #0020d0;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    background: #0020d0;
+
+    @include ut.desktop {
+      max-width: 1440px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 768px;
+    gap: 28px;
+
+    @include ut.desktop {
+      max-width: 1200px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    &-image {
+      width: 428px;
+      height: 272px;
+
+      background-repeat: no-repeat;
+      background-image: url('../../../assets//images/main/generator-background-mobile.png');
+
+      @include ut.tablet {
+        background-image: url('../../../assets//images/main/generator-background-tablet.png');
+      }
+
+      @include ut.desktop {
+        background-image: url('../../../assets//images/main/generator-background-desktop.png');
+      }
+    }
+
+    &-title {
+      padding-left: 39px;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      @include ut.tablet {
+        font-size: 24px;
+        line-height: 31px;
+      }
+
+      @include ut.desktop {
+        font-size: 40px;
+        line-height: 58px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 39px;
+
+    gap: 27px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 7px;
+
+    &-preview {
+      position: relative;
+
+      display: flex;
+
+      margin: 24px 0 0 0;
+    }
+
+    &-icon {
+      &_star {
+        width: 27px;
+        height: 27px;
+
+        @include ut.tablet {
+          width: 39px;
+          height: 38px;
+        }
+
+        @include ut.desktop {
+          width: 72px;
+          height: 70px;
+        }
+      }
+
+      &_cow {
+        width: 59px;
+        height: 47px;
+
+        margin: -20px 0 0 -33px;
+
+        @include ut.tablet {
+          width: 69px;
+          height: 55px;
+        }
+
+        @include ut.desktop {
+          width: 160px;
+          height: 88px;
+        }
+      }
+
+      &_dog {
+        width: 50px;
+        height: 40px;
+
+        margin: -22px 0 0 -24px;
+
+        @include ut.tablet {
+          width: 69px;
+          height: 55px;
+        }
+
+        @include ut.desktop {
+          width: 116px;
+          height: 110px;
+        }
+      }
+
+      &_shape {
+        width: 50px;
+        height: 40px;
+
+        margin: -11px 4px 0 -27px;
+
+        @include ut.tablet {
+          width: 69px;
+          height: 55px;
+        }
+
+        @include ut.desktop {
+          width: 233px;
+          height: 107px;
+        }
+      }
+
+      &_pig {
+        width: 50px;
+        height: 40px;
+
+        @include ut.tablet {
+          width: 69px;
+          height: 55px;
+        }
+
+        @include ut.desktop {
+          width: 107px;
+          height: 99px;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      @include ut.desktop {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+
+    &-text {
+      max-width: 300px;
+
+      font-family: vars.$montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+
+      @include ut.desktop {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}

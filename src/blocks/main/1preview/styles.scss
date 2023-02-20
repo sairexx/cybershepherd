@@ -2,37 +2,154 @@
 @use 'styles/variables' as vars;
 
 .preview {
+  position: relative;
+
   display: flex;
-  align-items: flex-end;
   justify-content: center;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url('../../../assets/images/main-preview.png');
+  width: 100%;
 
-  &__content {
+  &__container {
     position: relative;
+
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    height: 864px;
 
-    // width: 350px;
-    margin-top: 435px;
-    padding-top: 231px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/images/main/preview-background-mobile.png');
 
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-blend-mode: multiply;
-    // background-image: url('../../../assets/images/main-preview-star.svg');
+    @include ut.tablet {
+      height: 621px;
+      max-width: 1024px;
+
+      background-position-y: -60px;
+      background-image: url('../../../assets/images/main/preview-background-tablet.png');
+    }
+
+    @include ut.desktop {
+      max-width: 1440px;
+      height: 914px;
+
+      backdrop-filter: 20px;
+      background-position-y: -110px;
+      background-image: url('../../../assets/images/main/preview-background-desktop.png');
+    }
   }
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  &__frame {
+    display: none;
 
-    padding: 0 30px 33px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    @include ut.tablet {
+      display: flex;
+    }
+
+    &-source {
+      &_tablet {
+        display: flex;
+
+        @include ut.desktop {
+          display: none;
+        }
+      }
+
+      &_desktop {
+        display: none;
+
+        @include ut.desktop {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__star {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 9px;
+
+    padding: 0 39px 32px 39px;
+
+    width: 100%;
+    height: 431.59px;
+
+    max-width: 638.19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../../assets//images/main/wrapper-mobile.png');
+    mix-blend-mode: multiply;
+
+    @include ut.tablet {
+      max-width: unset;
+      width: 720.2px;
+      height: 482.98px;
+
+      gap: 9px;
+      padding: 0 39px 101px 196px;
+      background-image: url('../../../assets//images/main/wrapper-tablet.png');
+    }
+
+    @include ut.desktop {
+      padding: 0 48px 129px 229px;
+      gap: 23px;
+      width: 1037px;
+      height: 699.81px;
+
+      background-image: url('../../../assets//images/main/wrapper-desktop.png');
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 9px;
+
+    padding: 0 39px 32px 39px;
+
+    width: 100%;
+    height: 431.59px;
+
+    max-width: 638.19px;
+
+    z-index: 2;
+
+    @include ut.tablet {
+      max-width: unset;
+      width: 720.2px;
+      height: 482.98px;
+
+      gap: 9px;
+      padding: 0 39px 101px 196px;
+    }
+
+    @include ut.desktop {
+      width: 1037px;
+      height: 699.81px;
+
+      padding: 0 48px 129px 229px;
+
+      gap: 23px;
+    }
   }
 
   &__title {
@@ -40,21 +157,19 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
-
     text-transform: uppercase;
 
     color: #ffffff;
-    z-index: 2;
+
+    @include ut.desktop {
+      font-size: 40px;
+      line-height: 49px;
+    }
   }
 
-  &__star {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    mix-blend-mode: multiply 0.3;
-  }
+  &__text {
+    max-width: 350px;
 
-  &__description {
     font-family: vars.$montserrat;
     font-style: normal;
     font-weight: 500;
@@ -62,6 +177,40 @@
     line-height: 19px;
 
     color: #ffffff;
-    z-index: 2;
+
+    @include ut.tablet {
+      display: none;
+      max-width: 380px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include ut.desktop {
+      max-width: 580px;
+
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &_tablet {
+      display: none;
+
+      @include ut.tablet {
+        display: flex;
+      }
+
+      @include ut.desktop {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @include ut.desktop {
+        display: flex;
+      }
+    }
   }
 }
