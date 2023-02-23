@@ -6,14 +6,20 @@
   justify-content: center;
 
   width: 100%;
-  background: #0020d0;
 
   &__container {
     display: flex;
     justify-content: center;
 
     width: 100%;
+    padding: 0 0 32px 0;
     background: #0020d0;
+
+    max-width: 1024px;
+
+    @include ut.tablet {
+      padding: 0 0 110px 0;
+    }
 
     @include ut.desktop {
       max-width: 1440px;
@@ -28,6 +34,10 @@
     max-width: 768px;
     gap: 28px;
 
+    @include ut.tablet {
+      gap: 25px;
+    }
+
     @include ut.desktop {
       max-width: 1200px;
     }
@@ -38,6 +48,12 @@
     flex-direction: column;
     gap: 28px;
 
+    @include ut.tablet {
+      gap: 50px;
+      align-items: center;
+      flex-direction: row;
+    }
+
     &-image {
       width: 428px;
       height: 272px;
@@ -46,6 +62,9 @@
       background-image: url('../../../assets//images/main/generator-background-mobile.png');
 
       @include ut.tablet {
+        flex: 0 0 auto;
+        height: 361px;
+        margin: -101px 0px 0px 7px;
         background-image: url('../../../assets//images/main/generator-background-tablet.png');
       }
 
@@ -55,7 +74,7 @@
     }
 
     &-title {
-      padding-left: 39px;
+      padding: 0 39px;
 
       font-weight: 500;
       font-size: 18px;
@@ -66,6 +85,9 @@
       color: #ffffff;
 
       @include ut.tablet {
+        margin: 0 0 -22px 0;
+        padding: 0;
+
         font-size: 24px;
         line-height: 31px;
       }
@@ -81,14 +103,104 @@
     display: flex;
     flex-wrap: wrap;
 
-    padding-left: 39px;
+    padding: 0 39px;
 
-    gap: 27px;
+    gap: 30px;
+
+    @include ut.tablet {
+      row-gap: 25px;
+      column-gap: 62px;
+
+      padding: 0 0 0 48px;
+    }
   }
 
   &__item {
     display: flex;
+    align-items: flex-start;
     gap: 7px;
+
+    max-width: 360px;
+
+    @include ut.tablet {
+      max-width: 329px;
+    }
+
+    &_cow {
+      @include ut.tablet {
+        gap: 8px;
+
+        .generator__item-preview {
+          margin: 14px 0 0 0;
+        }
+      }
+    }
+
+    &_dog {
+      .generator__item-info {
+        gap: 7px;
+      }
+
+      .generator__item-preview {
+        margin: 21px 0 0 0;
+      }
+
+      @include ut.tablet {
+        .generator__item-preview {
+          margin: 15px 0 0 4px;
+        }
+
+        .generator__item-info {
+          gap: 10px;
+        }
+      }
+    }
+
+    &_shape {
+      margin-top: 12px;
+
+      .generator__item-info {
+        gap: 10px;
+      }
+
+      .generator__item-preview {
+        margin: 21px 0 0 0;
+      }
+
+      @include ut.tablet {
+        gap: 13px;
+        .generator__item-preview {
+          margin: 13px 0 0 0;
+        }
+      }
+    }
+
+    &_pig {
+      .generator__item-title {
+        max-width: 267px;
+      }
+
+      .generator__item-text {
+        max-width: 248px;
+      }
+
+      @include ut.tablet {
+        max-width: 327px;
+        gap: 18px;
+
+        .generator__item-icon_star {
+          margin: 0 0 0 4px;
+        }
+
+        .generator__item-title {
+          padding-top: 11px;
+        }
+
+        .generator__item-info {
+          gap: 10px;
+        }
+      }
+    }
 
     &-preview {
       position: relative;
@@ -121,8 +233,10 @@
         margin: -20px 0 0 -33px;
 
         @include ut.tablet {
-          width: 69px;
+          width: 86px;
           height: 55px;
+
+          margin: -27px 0 0 -49px;
         }
 
         @include ut.desktop {
@@ -138,8 +252,10 @@
         margin: -22px 0 0 -24px;
 
         @include ut.tablet {
-          width: 69px;
-          height: 55px;
+          width: 74px;
+          height: 58px;
+
+          margin: -35px 0 0px -40px;
         }
 
         @include ut.desktop {
@@ -152,11 +268,13 @@
         width: 50px;
         height: 40px;
 
-        margin: -11px 4px 0 -27px;
+        margin: -21px 4px 0 -27px;
 
         @include ut.tablet {
           width: 69px;
           height: 55px;
+
+          margin: -34px 4px 0 -39px;
         }
 
         @include ut.desktop {
@@ -169,9 +287,13 @@
         width: 50px;
         height: 40px;
 
+        margin: -22px 4px 0 -28px;
+
         @include ut.tablet {
-          width: 69px;
+          width: 57px;
           height: 55px;
+
+          margin: -29px 4px 0 -39px;
         }
 
         @include ut.desktop {
