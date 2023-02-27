@@ -1,0 +1,18 @@
+@use 'styles/utils' as ut;
+
+.main__catalog {
+  .catalog__item {
+    display: none;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      display: flex;
+    }
+
+    @include ut.desktop {
+      display: flex;
+    }
+  }
+}
